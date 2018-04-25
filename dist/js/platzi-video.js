@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/Users/carlosandresrodriguez/Documents/platzi/react2/dist/";
+/******/ 	__webpack_require__.p = "C:\\Users\\carlosrodriguez\\Documents\\Projects\\react2\\dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 191);
@@ -42951,7 +42951,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".RaisedButtonExampleSimple-cover {\n    margin-top: 80px;\n}", ""]);
+exports.push([module.i, ".RaisedButtonExampleSimple-cover {\r\n    margin-top: 80px;\r\n}", ""]);
 
 // exports
 
@@ -43320,7 +43320,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".Media {\n    cursor: pointer;\n    margin-right: 15px;\n    display: inline-block;\n    width: 260px;\n    vertical-align: top;\n  }\n  \n  .Media:hover .Media-cover {\n    box-shadow: 0 0 10px rgba(0,0,0,.3);\n  }\n  \n  .Media-cover {\n    transition: .3s;\n    box-shadow: 0 0 5px rgba(0,0,0,.3);\n    height: 160px;\n  }\n  \n  .Media-image {\n    object-fit: cover;\n  }\n  \n  .Media-title {\n    margin: 5px 0 0 0;\n    color: #44546b;\n    white-space: normal;\n  }\n  \n  .Media-author {\n    font-size: 12px;\n    margin: 5px 0 0 0;\n  }", ""]);
+exports.push([module.i, ".Media {\r\n    cursor: pointer;\r\n    margin-right: 15px;\r\n    display: inline-block;\r\n    width: 260px;\r\n    vertical-align: top;\r\n  }\r\n  \r\n  .Media:hover .Media-cover {\r\n    box-shadow: 0 0 10px rgba(0,0,0,.3);\r\n  }\r\n  \r\n  .Media-cover {\r\n    transition: .3s;\r\n    box-shadow: 0 0 5px rgba(0,0,0,.3);\r\n    height: 160px;\r\n  }\r\n  \r\n  .Media-image {\r\n    object-fit: cover;\r\n  }\r\n  \r\n  .Media-title {\r\n    margin: 5px 0 0 0;\r\n    color: #44546b;\r\n    white-space: normal;\r\n  }\r\n  \r\n  .Media-author {\r\n    font-size: 12px;\r\n    margin: 5px 0 0 0;\r\n  }", ""]);
 
 // exports
 
@@ -43365,7 +43365,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".Playlist {\n    overflow-x: auto;\n    /*width: 500px;*/\n    white-space: nowrap;\n    /*display: flex;*/\n    /*flex-wrap: wrap;*/\n    /*height: 500px;*/\n    /*background: red;*/\n    overflow-y: hidden;\n    padding-bottom: 80px;\n  }", ""]);
+exports.push([module.i, ".Playlist {\r\n    overflow-x: auto;\r\n    /*width: 500px;*/\r\n    white-space: nowrap;\r\n    /*display: flex;*/\r\n    /*flex-wrap: wrap;*/\r\n    /*height: 500px;*/\r\n    /*background: red;*/\r\n    overflow-y: hidden;\r\n    padding-bottom: 80px;\r\n  }", ""]);
 
 // exports
 
@@ -66672,7 +66672,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".Cards {\n    display: inline-flex;\n}", ""]);
+exports.push([module.i, ".Cards {\r\n    display: inline-flex;\r\n}", ""]);
 
 // exports
 
@@ -66694,9 +66694,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = __webpack_require__(0);
 
@@ -66710,13 +66710,17 @@ var _keyboardArrowRight = __webpack_require__(474);
 
 var _keyboardArrowRight2 = _interopRequireDefault(_keyboardArrowRight);
 
+var _keyboardArrowLeft = __webpack_require__(475);
+
+var _keyboardArrowLeft2 = _interopRequireDefault(_keyboardArrowLeft);
+
 var _colors = __webpack_require__(40);
 
 var _FloatingActionButton = __webpack_require__(164);
 
 var _FloatingActionButton2 = _interopRequireDefault(_FloatingActionButton);
 
-__webpack_require__(475);
+__webpack_require__(476);
 
 var _styles = __webpack_require__(181);
 
@@ -66728,15 +66732,46 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var style = {
-    marginRight: 20
-};
-
-var buttonColor = {
-    backgroundColor: "background-color: #3C3C3C"
+var styles = {
+    marginRight: 20,
+    medium: {
+        width: 96,
+        height: 96,
+        padding: 24
+    },
+    large: {
+        width: 120,
+        height: 120,
+        padding: 30
+    }
 };
 
 function SampleNextArrow(props) {
+    var className = props.className,
+        style = props.style,
+        onClick = props.onClick,
+        theme = props.theme;
+
+    console.log(props.className);
+    return _react2.default.createElement(
+        'div',
+        {
+            onClick: onClick,
+            className: className,
+            style: _extends({}, style)
+        },
+        _react2.default.createElement(
+            _styles.MuiThemeProvider,
+            null,
+            _react2.default.createElement(
+                _FloatingActionButton2.default,
+                { backgroundColor: '#3C3C3C' },
+                _react2.default.createElement(_keyboardArrowRight2.default, null)
+            )
+        )
+    );
+}
+function SamplePrevArrow(props) {
     var className = props.className,
         style = props.style,
         onClick = props.onClick;
@@ -66744,41 +66779,20 @@ function SampleNextArrow(props) {
     return _react2.default.createElement(
         'div',
         {
-            onClick: onClick,
-            style: { display: 'block', background: 'lightgray' },
-            className: className
+            className: className,
+            style: _extends({}, style),
+            onClick: onClick
         },
         _react2.default.createElement(
             _styles.MuiThemeProvider,
             null,
             _react2.default.createElement(
                 _FloatingActionButton2.default,
-                { secondary: true, style: buttonColor },
-                _react2.default.createElement(_keyboardArrowRight2.default, null)
+                { backgroundColor: '#3C3C3C' },
+                _react2.default.createElement(_keyboardArrowLeft2.default, null)
             )
         )
     );
-}
-// export const RightNavButton = (props) => {
-//     const { className, style, onClick } = props;
-//     return (
-//         <div style= {{ display: "block", background: "red" }}>
-//             <i className="fa fa-chevron-circle-left fa-3x"
-//                 onClick={props.previousSlide} aria-hidden="true"></i>
-//           </div>
-//     )
-// }
-function SamplePrevArrow(props) {
-    var className = props.className,
-        style = props.style,
-        onClick = props.onClick;
-
-    console.log(props);
-    return _react2.default.createElement('div', {
-        className: className,
-        style: { display: 'block', background: 'green' },
-        onClick: onClick
-    });
 }
 
 var ReactSlick = function (_Component) {
@@ -66797,8 +66811,8 @@ var ReactSlick = function (_Component) {
                 dots: true,
                 infinite: false,
                 speed: 500,
-                slidesToShow: 4,
-                slidesToScroll: 4,
+                slidesToShow: 3,
+                slidesToScroll: 3,
                 initialSlide: 0,
                 nextArrow: _react2.default.createElement(SampleNextArrow, null),
                 prevArrow: _react2.default.createElement(SamplePrevArrow, null),
@@ -66815,13 +66829,15 @@ var ReactSlick = function (_Component) {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
-                        initialSlide: 2
+                        initialSlide: 2,
+                        arrow: false
                     }
                 }, {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        arrow: false
                     }
                 }]
             };
@@ -70308,10 +70324,48 @@ exports.default = HardwareKeyboardArrowRight;
 /* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(14);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+var _SvgIcon = __webpack_require__(13);
+
+var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HardwareKeyboardArrowLeft = function HardwareKeyboardArrowLeft(props) {
+  return _react2.default.createElement(
+    _SvgIcon2.default,
+    props,
+    _react2.default.createElement('path', { d: 'M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z' })
+  );
+};
+HardwareKeyboardArrowLeft = (0, _pure2.default)(HardwareKeyboardArrowLeft);
+HardwareKeyboardArrowLeft.displayName = 'HardwareKeyboardArrowLeft';
+HardwareKeyboardArrowLeft.muiName = 'SvgIcon';
+
+exports.default = HardwareKeyboardArrowLeft;
+
+/***/ }),
+/* 476 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(476);
+var content = __webpack_require__(477);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -70336,7 +70390,7 @@ if(false) {
 }
 
 /***/ }),
-/* 476 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(51)(undefined);
@@ -70344,7 +70398,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, "h3 {\n    background: #5f9ea0;\n    color: #fff;\n    font-size: 36px;\n    line-height: 100px;\n    margin: 10px;\n    padding: 2%;\n    position: relative;\n    text-align: center;\n}\n/* button {\n    border: 10px;\n    box-sizing: border-box;\n    display: inline-block;\n    font-family: Roboto, sans-serif;\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n    cursor: pointer;\n    text-decoration: none;\n    margin: 0px;\n    padding: 0px;\n    outline: none;\n    font-size: inherit;\n    font-weight: inherit;\n    position: relative;\n    vertical-align: bottom;\n    background-color: rgb(255, 64, 129);\n    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n    height: 56px;\n    width: 56px;\n    overflow: hidden;\n    border-radius: 50%;\n    text-align: center;\n} */", ""]);
+exports.push([module.i, "h3 {\r\n    background: #5f9ea0;\r\n    color: #fff;\r\n    font-size: 36px;\r\n    line-height: 100px;\r\n    margin: 10px;\r\n    padding: 2%;\r\n    position: relative;\r\n    text-align: center;\r\n}\r\n.slick-prev:before, .slick-next:before {\r\n    display: none;\r\n}\r\n/* button {\r\n    border: 10px;\r\n    box-sizing: border-box;\r\n    display: inline-block;\r\n    font-family: Roboto, sans-serif;\r\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n    margin: 0px;\r\n    padding: 0px;\r\n    outline: none;\r\n    font-size: inherit;\r\n    font-weight: inherit;\r\n    position: relative;\r\n    vertical-align: bottom;\r\n    background-color: rgb(255, 64, 129);\r\n    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\r\n    height: 56px;\r\n    width: 56px;\r\n    overflow: hidden;\r\n    border-radius: 50%;\r\n    text-align: center;\r\n} */", ""]);
 
 // exports
 

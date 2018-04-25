@@ -1,50 +1,57 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import KeyboardArrowRight from 'material-ui/svg-icons/hardware/keyboard-arrow-right';
+import KeyboardArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
 import {fullWhite} from 'material-ui/styles/colors';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import './reactslick.css';
 
 import { MuiThemeProvider } from 'material-ui/styles';
 
-const style = {
+const styles = {
     marginRight: 20,
+    medium: {
+        width: 96,
+        height: 96,
+        padding: 24,
+      },
+      large: {
+        width: 120,
+        height: 120,
+        padding: 30,
+      }
 };
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
+    console.log(props.className);
     return(
         <div 
             onClick={onClick}
             className={className}
+            style={{...style }}
         >
-        <MuiThemeProvider >
-            <FloatingActionButton backgroundColor="#3C3C3C" style={style}>
-                <KeyboardArrowRight />
-            </FloatingActionButton>
-        </MuiThemeProvider>
-        
+            <MuiThemeProvider >
+                <FloatingActionButton backgroundColor="#3C3C3C">
+                    <KeyboardArrowRight />
+                </FloatingActionButton>
+            </MuiThemeProvider>        
         </div>
     );
 }
-// export const RightNavButton = (props) => {
-//     const { className, style, onClick } = props;
-//     return (
-//         <div style= {{ display: "block", background: "red" }}>
-//             <i className="fa fa-chevron-circle-left fa-3x"
-//                 onClick={props.previousSlide} aria-hidden="true"></i>
-//           </div>
-//     )
-// }
 function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
-    console.log(props);
     return (
         <div
             className={className}
-            style={{ display: 'block', background: 'green'}}
+            style={{...style}}
             onClick={onClick}
         >
+        <MuiThemeProvider >
+            <FloatingActionButton backgroundColor="#3C3C3C">
+                <KeyboardArrowLeft />
+            </FloatingActionButton>
+        </MuiThemeProvider>
         </div>
     );
 }
@@ -52,6 +59,7 @@ function SamplePrevArrow(props) {
 export default class ReactSlick extends Component {
     render() {
         const settings = {
+            accessibility: true,
             dots: true,
             infinite: false,
             speed: 500,
@@ -75,14 +83,16 @@ export default class ReactSlick extends Component {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
-                        initialSlide: 2
+                        initialSlide: 2,
+                        arrows: false
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        arrows: false
                     }
                 }
             ]
