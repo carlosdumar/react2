@@ -43,29 +43,44 @@ module.exports = (env) => {
           },
         },
         {
-          test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  minimize: true,
-                }
-              }
-            ]
-          })
-        },
-        {
-          test: /\.(jpg|png|gif|svg)$/,
-          use: {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              fallback: 'file-loader',
-              name: 'images/[name].[hash].[ext]',
-            }
+          test: /\.(gif|jpe?g|png)$/,
+          loader: 'url-loader?limit=25000',
+          query: {
+            limit: 10000,
+            name: 'static/media/images/[name].[hash:8].[ext]'
           }
         },
+        {
+          test: /\.scss$/,
+          loaders: ['style-loader', 'css-loader', 'sass-loader', 'resolve-url-loader?sourceMap', 'sass-loader?sourceMap'],
+          include: path.resolve(__dirname, '../../')
+        },
+        {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader?importLoaders=1'
+        },
+        // Fonts
+        {
+          test: /\.(eot|woff|woff(2)?|ttf|svg|png|jpg|gif)?$/,
+          loader: 'url-loader?limit=10000&mimetype=application/font-woff',
+          query: {
+            name: 'static/media/files/[name].[hash:8].[ext]'
+          }
+        },
+        {
+          test: /\.svg$/,
+          use: [
+            {
+              loader: 'file-loader'
+            },
+            {
+              loader: 'react-svg-loader',
+              query: {
+                jsx: true,
+              },
+            }
+          ],
+        }
       ]
     },
     plugins
