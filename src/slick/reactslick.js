@@ -24,7 +24,6 @@ const styles = {
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
-    console.log(props.className);
     return(
         <div 
             onClick={onClick}
@@ -57,7 +56,13 @@ function SamplePrevArrow(props) {
 }
 
 export default class ReactSlick extends Component {
+    state = {
+        slideIndex: 0,
+        updateCount: 0    
+    }
+
     render() {
+        console.log(this.state)
         const settings = {
             accessibility: true,
             dots: true,
@@ -67,7 +72,21 @@ export default class ReactSlick extends Component {
             slidesToScroll: 3,
             initialSlide: 0,
             nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />,      
+            prevArrow: <SamplePrevArrow />,
+            // afterChange: () =>
+            //     this.setState(state => ({ updateCount: state.updateCount + 1 })),
+            // beforeChange: (current, next) => this.setState({ slideIndex: next }),
+            afterChange: function(index, dots) {                
+                if(index === 3) {
+                    console.log({dots})
+                }                
+            },
+            appendDots: dots => (                
+                dots.length = 4,
+                <ul className="carlos">   
+                    {dots}
+                </ul>
+              ),
             responsive: [
                 {
                     breakpoint: 1024,
@@ -90,16 +109,16 @@ export default class ReactSlick extends Component {
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 2,
-                        arrows: false
+                        slidesToShow: 1.05,
+                        slidesToScroll: 1,
+                        arrows: false,
                     }
                 }
             ]
         };
         return(
            // <h2> Responsive </h2>
-            <Slider {...settings} className="Slider">
+            <Slider {...settings} className="Slider" ref={slider => (this.slider = slider)}>
                 <div>
                     <h3>1</h3>
                 </div>
