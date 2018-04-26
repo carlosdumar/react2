@@ -67,7 +67,7 @@ export default class ReactSlick extends Component {
             slidesToScroll: 3,
             initialSlide: 0,
             nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />,          
+            prevArrow: <SamplePrevArrow />,      
             responsive: [
                 {
                     breakpoint: 1024,
@@ -91,7 +91,7 @@ export default class ReactSlick extends Component {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1,
+                        slidesToScroll: 2,
                         arrows: false
                     }
                 }

@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "C:\\Users\\carlosrodriguez\\Documents\\Projects\\react2\\dist/";
+/******/ 	__webpack_require__.p = "/Users/carlosandresrodriguez/Documents/platzi/react2/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 191);
@@ -42951,7 +42951,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".RaisedButtonExampleSimple-cover {\r\n    margin-top: 80px;\r\n}", ""]);
+exports.push([module.i, ".RaisedButtonExampleSimple-cover {\n    margin-top: 80px;\n}", ""]);
 
 // exports
 
@@ -43320,7 +43320,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".Media {\r\n    cursor: pointer;\r\n    margin-right: 15px;\r\n    display: inline-block;\r\n    width: 260px;\r\n    vertical-align: top;\r\n  }\r\n  \r\n  .Media:hover .Media-cover {\r\n    box-shadow: 0 0 10px rgba(0,0,0,.3);\r\n  }\r\n  \r\n  .Media-cover {\r\n    transition: .3s;\r\n    box-shadow: 0 0 5px rgba(0,0,0,.3);\r\n    height: 160px;\r\n  }\r\n  \r\n  .Media-image {\r\n    object-fit: cover;\r\n  }\r\n  \r\n  .Media-title {\r\n    margin: 5px 0 0 0;\r\n    color: #44546b;\r\n    white-space: normal;\r\n  }\r\n  \r\n  .Media-author {\r\n    font-size: 12px;\r\n    margin: 5px 0 0 0;\r\n  }", ""]);
+exports.push([module.i, ".Media {\n    cursor: pointer;\n    margin-right: 15px;\n    display: inline-block;\n    width: 260px;\n    vertical-align: top;\n  }\n  \n  .Media:hover .Media-cover {\n    box-shadow: 0 0 10px rgba(0,0,0,.3);\n  }\n  \n  .Media-cover {\n    transition: .3s;\n    box-shadow: 0 0 5px rgba(0,0,0,.3);\n    height: 160px;\n  }\n  \n  .Media-image {\n    object-fit: cover;\n  }\n  \n  .Media-title {\n    margin: 5px 0 0 0;\n    color: #44546b;\n    white-space: normal;\n  }\n  \n  .Media-author {\n    font-size: 12px;\n    margin: 5px 0 0 0;\n  }", ""]);
 
 // exports
 
@@ -43365,7 +43365,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".Playlist {\r\n    overflow-x: auto;\r\n    /*width: 500px;*/\r\n    white-space: nowrap;\r\n    /*display: flex;*/\r\n    /*flex-wrap: wrap;*/\r\n    /*height: 500px;*/\r\n    /*background: red;*/\r\n    overflow-y: hidden;\r\n    padding-bottom: 80px;\r\n  }", ""]);
+exports.push([module.i, ".Playlist {\n    overflow-x: auto;\n    /*width: 500px;*/\n    white-space: nowrap;\n    /*display: flex;*/\n    /*flex-wrap: wrap;*/\n    /*height: 500px;*/\n    /*background: red;*/\n    overflow-y: hidden;\n    padding-bottom: 80px;\n  }", ""]);
 
 // exports
 
@@ -66672,7 +66672,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, ".Cards {\r\n    display: inline-flex;\r\n}", ""]);
+exports.push([module.i, ".Cards {\n    display: inline-flex;\n}", ""]);
 
 // exports
 
@@ -66749,8 +66749,7 @@ var styles = {
 function SampleNextArrow(props) {
     var className = props.className,
         style = props.style,
-        onClick = props.onClick,
-        theme = props.theme;
+        onClick = props.onClick;
 
     console.log(props.className);
     return _react2.default.createElement(
@@ -66808,6 +66807,7 @@ var ReactSlick = function (_Component) {
         key: 'render',
         value: function render() {
             var settings = {
+                accessibility: true,
                 dots: true,
                 infinite: false,
                 speed: 500,
@@ -66830,14 +66830,14 @@ var ReactSlick = function (_Component) {
                         slidesToShow: 2,
                         slidesToScroll: 2,
                         initialSlide: 2,
-                        arrow: false
+                        arrows: false
                     }
                 }, {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        arrow: false
+                        arrows: false
                     }
                 }]
             };
@@ -70398,7 +70398,7 @@ exports = module.exports = __webpack_require__(51)(undefined);
 
 
 // module
-exports.push([module.i, "h3 {\r\n    background: #5f9ea0;\r\n    color: #fff;\r\n    font-size: 36px;\r\n    line-height: 100px;\r\n    margin: 10px;\r\n    padding: 2%;\r\n    position: relative;\r\n    text-align: center;\r\n}\r\n.slick-prev:before, .slick-next:before {\r\n    display: none;\r\n}\r\n/* button {\r\n    border: 10px;\r\n    box-sizing: border-box;\r\n    display: inline-block;\r\n    font-family: Roboto, sans-serif;\r\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n    margin: 0px;\r\n    padding: 0px;\r\n    outline: none;\r\n    font-size: inherit;\r\n    font-weight: inherit;\r\n    position: relative;\r\n    vertical-align: bottom;\r\n    background-color: rgb(255, 64, 129);\r\n    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\r\n    height: 56px;\r\n    width: 56px;\r\n    overflow: hidden;\r\n    border-radius: 50%;\r\n    text-align: center;\r\n} */", ""]);
+exports.push([module.i, "h3 {\n    background: #5f9ea0;\n    color: #fff;\n    font-size: 36px;\n    line-height: 100px;\n    margin: 10px;\n    padding: 2%;\n    position: relative;\n    text-align: center;\n}\n\n.slick-prev:before, .slick-next:before {\n    display: none;\n}\n\n.slick-dots li button:before {\n    font-size: 8px;\n    width: auto;\n}\n.slick-arrow {\n    height: auto;\n    width: auto;\n    z-index: 1;\n}", ""]);
 
 // exports
 
