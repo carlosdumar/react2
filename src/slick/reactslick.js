@@ -81,8 +81,26 @@ export default class ReactSlick extends Component {
         slideIndex: 0,
         updateCount: 0    
     }
+
+    // componentDidMount() {
+        
+    //     $('ul li button').click((event) => {
+            
+    //         var indexDot = $('.slick-dots li.slick-active button')["0"].textContent;
+    //         var newDot = event.target.textContent;
+
+    //         if(newDot > indexDot) {
+    //             $(`.slick-dots li:nth-child(${indexDot})`).css("display", "none");
+    //             $(`.slick-dots li:nth-child(${parseInt(newDot) + 1})`).css("display", "inline-block");
+    //         }
+    //         // console.log( event.target.textContent);
+    //     })
+    // }
     
     componentDidUpdate(prevProps, prevState) {
+        // $('.slick-dots li:gt(3)').css("display", "none");
+   
+
         // $(() => {
         //     console.log('cc ' + this.state.slideIndex)
         //     var s = $('.slick-dots li.slick-active button').text();
@@ -106,10 +124,9 @@ export default class ReactSlick extends Component {
 
     //    var s = ReactDOM.findDOMNode(this).getElementsByClassName("slick-dots").ul;
     //    console.log(s);
-        $(()=> {
-            console.log($('ul li:nth-child(2)').prev().addClass('grande'));
-            //console.log($('ul li:nth-child(2)').prev()["0"].lastChild.style.backgroundColor = "red")
-        })
+        // $(()=> {
+        //    $('.slick-dots li:gt(4)').css("display", "none");
+        // })
     }
 
     render() {
@@ -141,12 +158,14 @@ export default class ReactSlick extends Component {
             prevArrow: <SamplePrevArrow />,
             // afterChange: () =>
             //     this.setState(state => ({ updateCount: state.updateCount + 1 })),
-            beforeChange: (current, next) => this.setState({ slideIndex: next }),
-            // beforeChange:() => {
-            //     console.log('carlos')
+            // beforeChange: (current, next) => this.setState({ slideIndex: next }),
+            // afterChange:() => {
+            //     $(()=> {
+            //         $('.slick-dots li:gt(4)').css("display", "none");
+            //      })
             // },
             appendDots: dots => (
-                dots.length = 4,
+                // dots.length = 4,
                 <div>
                     <ul >
                         {dots}                                                    
@@ -184,7 +203,6 @@ export default class ReactSlick extends Component {
             ]
         };  
         return(
-           // <h2> Responsive </h2>
            //<MuiThemeProvider>
             <Slider {...settings} className="Slider" >
                 
