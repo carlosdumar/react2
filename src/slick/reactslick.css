@@ -1,4 +1,4 @@
-h3 {
+/* h3 {
     background: #5f9ea0;
     color: #fff;
     font-size: 36px;
@@ -7,26 +7,48 @@ h3 {
     padding: 2%;
     position: relative;
     text-align: center;
-}
+} */
 
 .slick-prev:before, .slick-next:before {
     display: none;
 }
 .slick-dots li.slick-active button:before {
-    color: #184680;
+    color: #184680; 
 }
 
 .slick-dots li button:before {
     font-size: 8px;
     width: auto;
 }
+
 .slick-arrow {
     height: auto;
     width: auto;
     z-index: 1;
 }
 
- .slick-dots li:nth-child(4) button:before {
+.slick-dots li:last-child button:before {
     font-size: 6px;
     width: auto;
+}
+
+.slick-dots li:first-child button:before {
+    font-size: 6px;
+    width: auto;
+}
+
+.grande {
+    font-size: 16px;
+    width: auto;
+}
+
+.slick-dots li.slick-active button:before {
+    font-size: 8px !important;
+    width: auto;
+}
+ 
+@media (min-width: 1024px) {
+    .slick-slider {
+        margin: 218px 36px 0 253px;
+    }
 }

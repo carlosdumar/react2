@@ -6,52 +6,13 @@
       "title": "Destacados",
       "playlist": [
         {
-          "title": "¿Qué es responsive Design?",
+          "title": "Guardians of the Galaxy",
           "author": "LeonidasEsteban",
           "type": "video",
-          "cover": "/src/images/covers/gorillaz.jpg",
+          "description": "A group of cosmic adventurers led by Star-Lord, the Guardians of the Galaxy protect the universe from threats all across space. The team also includes Drax, Gamora, Groot and Rocket Raccoon!",
+          "cover": "./src/images/covers/galaxy.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 1
-        },
-        {
-          "title": "Cómo optimzar la carga de un website",
-          "author": "LeonidasEsteban",
-          "type": "video",
-          "cover": "/src/images/covers/optimizar.jpg",
-          "src": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
-          "id": 2
-        },
-        {
-          "title": "Qué es Bitcoin",
-          "author": "Yograterol",
-          "type": "video",
-          "cover": "/src/images/covers/bitcoin.jpg",
-          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
-        },
-        {
-          "title": "Que pasó con HTML5",
-          "author": "Freddier",
-          "type": "video",
-          "cover": "/src/images/covers/html5.jpg",
-          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
-        },
-        {
-          "title": "Lo mejor de Mejorando.la",
-          "author": "Cvander",
-          "type": "video",
-          "cover": "/src/images/covers/mejorandola.jpg",
-          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
-        },
-        {
-          "title": "WebMD",
-          "author": "Cvander",
-          "type": "video",
-          "cover": "/src/images/covers/mejorandola.jpg",
-          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 6
         }
       ]
     },
@@ -61,91 +22,141 @@
       "title": "Para programar",
       "playlist": [
         {
-          "title": "One more time",
+          "title": "Black Panther",
           "author": "Daft Punk",
           "type": "video",
-          "cover": "./images/covers/one-more-time.jpg",
+          "description": "Marvel Studios’ “Black Panther” follows T’Challa who, after the death of his father, the King of Wakanda, returns home to the isolated, technologically advanced African",
+          "cover": "./src/images/covers/blackPanther.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 1
-        },
-        {
-          "title": "Midnight City",
-          "author": "M83",
-          "type": "video",
-          "cover": "./images/covers/midnight.jpg",
-          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
-        },
-        {
-          "title": "Solar Sailer",
-          "author": "Daft Punk",
-          "type": "video",
-          "cover": "./images/covers/solar-sailer.jpg",
-          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 2
-        },
-        {
-          "title": "The social network",
-          "author": "The social network",
-          "type": "video",
-          "cover": "./images/covers/social.jpg",
-          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
-        },
-        {
-          "title": "No vaya a ser",
-          "author": "Pablo Alboran",
-          "type": "video",
-          "cover": "./images/covers/no-vaya-a-ser.jpg",
-          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
         }
       ]
     },
     {
       "id": 3,
-      "description": "Si no te queda de otra",
+      "description": "The Inhumans have always been one of Marvel's most enduring oddities. A race of genetic outsiders, they live secluded in their island kingdom of Attilan, preferring not to mix with the outside world. Even stranger, their genetic mutations are self-endowed; each Inhuman, as a coming-of-age ritual, endures exposure to the Terrigen Mists, a strange substance that imparts unearthly powers--some extraordinary, some monstrous.",
       "title": "Regueton",
       "playlist": [
         {
-          "title": "Despacito",
-          "author": "Luis Fonsi",
+          "title": "Inhumans",
+          "author": "Marvel Comics",
+          "description": "The Inhumans have always been one of Marvel's most enduring oddities.",
           "type": "video",
-          "cover": "./images/covers/despacito.jpg",
+          "cover": "./src/images/covers/inhumans.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 1
-        },
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Lo mejor de la semana",
+      "title": "Destacados",
+      "playlist": [
         {
-          "title": "Echame la culpa",
-          "author": "Luis fonsi",
+          "title": "Captain America",
+          "author": "LeonidasEsteban",
           "type": "video",
-          "cover": "./images/covers/echame-la-culpa.jpg",
+          "description": "The main story in CAPTAIN AMERICA #700, by storytellers Mark Waid and Chris Samnee, colorist Matthew Wilson, and letterer Joe Caramagna",
+          "cover": "/src/images/covers/captainAmerica.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
-        },
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Lo mejor de la semana",
+      "title": "Destacados",
+      "playlist": [
         {
-          "title": "Mi Gente",
-          "author": "J Bavil",
+          "title": "Ant-Man",
+          "author": "LeonidasEsteban",
           "type": "video",
-          "cover": "./images/covers/mi-gente.jpg",
+          "description": "Ant-Man is a legacy super-hero name, primarily associated with the ability to shrink in size. The original was Hank Pym; he was a founding member of the Avengers. Scott Lang took the name, an ex-con who broke into the New Jersey home of Dr. Henry Pym",
+          "cover": "/src/images/covers/antman.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 2
-        },
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "description": "Lo mejor de la semana",
+      "title": "Destacados",
+      "playlist": [
         {
-          "title": "Felices los 4",
-          "author": "Maluma",
+          "title": "Ant-Man",
+          "author": "LeonidasEsteban",
           "type": "video",
-          "cover": "./images/covers/felices.jpg",
+          "description": "Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adopting the name Spider-Man, Peter hoped to start a career using his new abilities.",
+          "cover": "/src/images/covers/spiderman.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
-        },
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "description": "Lo mejor de la semana",
+      "title": "Destacados",
+      "playlist": [
         {
-          "title": "Me Rehúso",
-          "author": "Danny Ocean",
+          "title": "DeadPool",
+          "author": "LeonidasEsteban",
           "type": "video",
-          "cover": "./images/covers/rehuso.jpg",
+          "description": "Deadpool possesses a superhuman healing factor derived from that of the mutant Wolverine that allows him to regenerate damaged or destroyed areas of his cellular structure at a rate far greater than that of an ordinary human. ",
+          "cover": "/src/images/covers/deadpool.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "description": "Lo mejor de la semana",
+      "title": "Destacados",
+      "playlist": [
+        {
+          "title": "Blac Widow",
+          "author": "LeonidasEsteban",
+          "type": "video",
+          "description": "Natasha Romanova, known by many aliases, is an expert spy, athlete, and assassin. Trained at a young age by the KGB's infamous Red Room Academy, the Black Widow was formerly an enemy to the Avengers.",
+          "cover": "/src/images/covers/blackwidow.jpg",
+          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "description": "Lo mejor de la semana",
+      "title": "Destacados",
+      "playlist": [
+        {
+          "title": "Venom Mac Gargan",
+          "author": "LeonidasEsteban",
+          "type": "video",
+          "description": "One of Spider-Man's oldest enemies, Mac Gargan has recently abandoned his Scorpion suit and identity and bonded with the alien symbiote that had previously been hosted by Peter Parker and Eddie Brock",
+          "cover": "/src/images/covers/venom.jpg",
+          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "description": "Lo mejor de la semana",
+      "title": "Destacados",
+      "playlist": [
+        {
+          "title": "Thanus",
+          "author": "LeonidasEsteban",
+          "type": "video",
+          "description": "The Mad Titan Thanos, a melancholy, brooding individual, consumed with the concept of death, sought out personal power and increased strength, endowing himself with cybernetic implants until he became more powerful than any of his brethren",
+          "cover": "/src/images/covers/thanus.jpg",
+          "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+          "id": 1
         }
       ]
     }

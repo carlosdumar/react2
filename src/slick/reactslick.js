@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
 import Slider from 'react-slick';
-import KeyboardArrowRight from 'material-ui/svg-icons/hardware/keyboard-arrow-right';
-import KeyboardArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
-import {fullWhite} from 'material-ui/styles/colors';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import './reactslick.css';
+import Button from 'material-ui/Button';
+import Card, {CardContent, CardMedia} from 'material-ui/Card';
+import Typography from 'material-ui/Typography';
+import NavigateNext from '@material-ui/icons/NavigateNext';
+import NavigateBefore from '@material-ui/icons/NavigateBefore';
 
-import { MuiThemeProvider } from 'material-ui/styles';
+var $ = require('jquery');
+import './reactslick.css';
 
 const styles = {
     marginRight: 20,
@@ -19,8 +21,28 @@ const styles = {
         width: 120,
         height: 120,
         padding: 30,
+      },
+      width: "33%",
+      card: {
+          overflowWrap: 'break-word',
+          margin: 10,
+        //   height: 200
+      },
+      media: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9
       }
 };
+
+const bNavigatorStyles = {
+    backgroundColor: '#335E94',
+    opacity: '0.9'
+}
+
+const arrowStyle = {
+    color: '#FFFFFF',
+    fontSize: 35
+}
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -30,11 +52,9 @@ function SampleNextArrow(props) {
             className={className}
             style={{...style }}
         >
-            <MuiThemeProvider >
-                <FloatingActionButton backgroundColor="#3C3C3C">
-                    <KeyboardArrowRight />
-                </FloatingActionButton>
-            </MuiThemeProvider>        
+        <Button variant="fab" style={{...bNavigatorStyles}}>
+            <NavigateNext style={{ ...arrowStyle }} />
+        </Button>        
         </div>
     );
 }
@@ -46,46 +66,92 @@ function SamplePrevArrow(props) {
             style={{...style}}
             onClick={onClick}
         >
-        <MuiThemeProvider >
-            <FloatingActionButton backgroundColor="#3C3C3C">
-                <KeyboardArrowLeft />
-            </FloatingActionButton>
-        </MuiThemeProvider>
+        <Button variant="fab" style={{...bNavigatorStyles}}>
+            <NavigateBefore style={{ ...arrowStyle }} />
+        </Button>
         </div>
     );
 }
 
 export default class ReactSlick extends Component {
+    constructor(props) {
+        super(props)
+    }
     state = {
         slideIndex: 0,
         updateCount: 0    
     }
+    
+    componentDidUpdate(prevProps, prevState) {
+        // $(() => {
+        //     console.log('cc ' + this.state.slideIndex)
+        //     var s = $('.slick-dots li.slick-active button').text();
+        //     //console.log($('.slick-dots li button'));
+            
+        //     $('li button').click((event) => {
+        //         console.log(event);
+        //     })
+
+        //     if(s == 3) {
+        //         $('.slick-dots li:first-child button').css("font-size", "26px").css("width", "auto").css("background-color", "red")
+        //     }
+        //     if(s == 1) {
+        //         $('.slick-dots li:last-child button').css("font-size", "26px").css("width", "auto").css("background-color", "red")
+        //     }
+        //     console.log(s);
+        // })
+
+        // var s = document.getElementsByClassName('slick-dots')["0"]
+        // console.log(document.getElementsByClassName('slick-dots')["0"])
+
+    //    var s = ReactDOM.findDOMNode(this).getElementsByClassName("slick-dots").ul;
+    //    console.log(s);
+        $(()=> {
+            console.log($('ul li:nth-child(2)').prev().addClass('grande'));
+            //console.log($('ul li:nth-child(2)').prev()["0"].lastChild.style.backgroundColor = "red")
+        })
+    }
 
     render() {
-        console.log(this.state)
+        const categories = this.props.data.categories;
+        //console.log('categories: ' + categories);
+        const playlist = this.props.data.categories[0].playlist;
+        const playlist2 = this.props.data.categories[1].playlist;
+        const playlist3 = this.props.data.categories[2].playlist;
+        const playlist4 = this.props.data.categories[3].playlist;     
+        const playlist5 = this.props.data.categories[4].playlist;     
+        const playlist6 = this.props.data.categories[5].playlist;     
+        const playlist7 = this.props.data.categories[6].playlist;     
+        const playlist8 = this.props.data.categories[7].playlist;             
+        const playlist9 = this.props.data.categories[8].playlist;             
+        const playlist10 = this.props.data.categories[9].playlist;             
+        
         const settings = {
             accessibility: true,
+            adaptiveHeight: true,
             dots: true,
-            infinite: false,
+            infinite: true,
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 3,
             initialSlide: 0,
+            swipeToSlide: true,
+            className: "center",
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />,
             // afterChange: () =>
             //     this.setState(state => ({ updateCount: state.updateCount + 1 })),
-            // beforeChange: (current, next) => this.setState({ slideIndex: next }),
-            afterChange: function(index, dots) {                
-                if(index === 3) {
-                    console.log({dots})
-                }                
-            },
-            appendDots: dots => (                
+            beforeChange: (current, next) => this.setState({ slideIndex: next }),
+            // beforeChange:() => {
+            //     console.log('carlos')
+            // },
+            appendDots: dots => (
                 dots.length = 4,
-                <ul className="carlos">   
-                    {dots}
-                </ul>
+                <div>
+                    <ul >
+                        {dots}                                                    
+                    </ul>
+                </div>
               ),
             responsive: [
                 {
@@ -109,20 +175,250 @@ export default class ReactSlick extends Component {
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1.05,
+                        centerMode: true,
+                        slidesToShow: 1.0,
                         slidesToScroll: 1,
                         arrows: false,
                     }
                 }
             ]
-        };
+        };  
         return(
            // <h2> Responsive </h2>
-            <Slider {...settings} className="Slider" ref={slider => (this.slider = slider)}>
-                <div>
-                    <h3>1</h3>
+           //<MuiThemeProvider>
+            <Slider {...settings} className="Slider" >
+                
+                <div style={styles.width} className="Cards">
+                {
+                    playlist.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    >
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
                 </div>
-                <div>
+                <div  className="Cards">
+                {
+                    playlist2.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>                
+                <div  className="Cards">
+                {
+                    playlist3.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>
+                <div  className="Cards">
+                {
+                    playlist4.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>
+                <div style={styles.width} className="Cards">
+                {
+                    playlist5.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    >
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>
+                <div style={styles.width} className="Cards">
+                {
+                    playlist6.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    >
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>
+                <div style={styles.width} className="Cards">
+                {
+                    playlist7.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    >
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>
+                <div style={styles.width} className="Cards">
+                {
+                    playlist8.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    >
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>
+                <div style={styles.width} className="Cards">
+                {
+                    playlist9.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    >
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>
+                <div style={styles.width} className="Cards">
+                {
+                    playlist10.map((item) => {
+                        return <Card style={styles.card}>
+                                    <CardMedia
+                                        image={item.cover}                                        
+                                        title={item.title}
+                                        style={styles.media}
+                                        key={item.id}
+                                    >
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="headline" component="h2">
+                                            {item.title}
+                                        </Typography>
+                                        <Typography component="p">
+                                            {item.description}                                   
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                    })
+                }               
+                </div>
+                {/* <div>
+                    <h3>1</h3>
+                </div> */}
+                {/* <div>
                     <h3>2</h3>
                 </div>
                 <div>
@@ -139,11 +435,9 @@ export default class ReactSlick extends Component {
                 </div>
                 <div>
                     <h3>7</h3>
-                </div>
-                <div>
-                    <h3>8</h3>
-                </div>
+                </div> */}
             </Slider>
+            //</MuiThemeProvider >
         )
     }
 }
