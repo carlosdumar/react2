@@ -82,20 +82,25 @@ export default class ReactSlick extends Component {
         updateCount: 0    
     }
 
-    // componentDidMount() {
+    componentDidMount() {
         
-    //     $('ul li button').click((event) => {
-            
-    //         var indexDot = $('.slick-dots li.slick-active button')["0"].textContent;
-    //         var newDot = event.target.textContent;
+        // var mc = new Hammer(document.getElementsByTagName('li'));
 
-    //         if(newDot > indexDot) {
-    //             $(`.slick-dots li:nth-child(${indexDot})`).css("display", "none");
-    //             $(`.slick-dots li:nth-child(${parseInt(newDot) + 1})`).css("display", "inline-block");
-    //         }
-    //         // console.log( event.target.textContent);
-    //     })
-    // }
+        // mc.on("panleft panright", ev => {
+        //     $('.slick-dots').change((event) => {
+        //         console.log(event)
+        //     })
+        //     // console.log(ev);
+        //     // var indexDot = $('.slick-dots li.slick-active button')["0"].textContent;
+        //     // console.log(indexDot);
+        //     // var newDot = $('.slick-dots li.slick-active button')
+        //     // console.log(newDot);
+        //     //     if(newDot > indexDot) {
+        //     //         $(`.slick-dots li:nth-child(${indexDot})`).css("display", "none");
+        //     //         $(`.slick-dots li:nth-child(${parseInt(newDot) + 1})`).css("display", "inline-block");
+        //     //     }
+        // })
+    }
     
     componentDidUpdate(prevProps, prevState) {
         // $('.slick-dots li:gt(3)').css("display", "none");
@@ -147,7 +152,7 @@ export default class ReactSlick extends Component {
             accessibility: true,
             adaptiveHeight: true,
             dots: true,
-            infinite: true,
+            infinite: false,
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -156,14 +161,41 @@ export default class ReactSlick extends Component {
             className: "center",
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />,
-            // afterChange: () =>
-            //     this.setState(state => ({ updateCount: state.updateCount + 1 })),
+            afterChange: (index) =>
+                console.log(index),
             // beforeChange: (current, next) => this.setState({ slideIndex: next }),
-            // afterChange:() => {
-            //     $(()=> {
-            //         $('.slick-dots li:gt(4)').css("display", "none");
-            //      })
-            // },
+            beforeChange:(current, next) => {
+                $(()=> {
+                    
+                    var indexDot = $('.slick-dots li.slick-active button')["0"].textContent;
+                    // console.log(indexDot);
+                    console.log(next)
+                    if(indexDot == 4) {
+                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                        $('.slick-dots li:nth-child(1)').css("display", "none");
+                    }
+                    if(indexDot == 5) {
+                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                        $('.slick-dots li:nth-child(2)').css("display", "none");
+                    }
+                    if(indexDot == 6) {
+                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                        $('.slick-dots li:nth-child(3)').css("display", "none");
+                    }
+                    if(indexDot == 7) {
+                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                        $('.slick-dots li:nth-child(4)').css("display", "none");
+                    }
+                    if(indexDot == 8) {
+                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                        $('.slick-dots li:nth-child(5)').css("display", "none");
+                    }
+                    if(indexDot == 9) {
+                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                        $('.slick-dots li:nth-child(6)').css("display", "none");
+                    }
+                 })
+            },
             appendDots: dots => (
                 // dots.length = 4,
                 <div>
