@@ -148,6 +148,8 @@ export default class ReactSlick extends Component {
         const playlist9 = this.props.data.categories[8].playlist;             
         const playlist10 = this.props.data.categories[9].playlist;             
         
+        var count = 0;
+
         const settings = {
             accessibility: true,
             adaptiveHeight: true,
@@ -161,39 +163,65 @@ export default class ReactSlick extends Component {
             className: "center",
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />,
-            afterChange: (index) =>
-                console.log(index),
+            // afterChange: (index) =>
+            //     console.log(index),
             // beforeChange: (current, next) => this.setState({ slideIndex: next }),
             beforeChange:(current, next) => {
                 $(()=> {
                     
-                    var indexDot = $('.slick-dots li.slick-active button')["0"].textContent;
-                    // console.log(indexDot);
-                    console.log(next)
-                    if(indexDot == 4) {
-                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
-                        $('.slick-dots li:nth-child(1)').css("display", "none");
+                    if($(window).width() < 500) {
+                        var indexDot = $('.slick-dots li.slick-active button')["0"].textContent;
+                        console.log('indexDot: ' + indexDot);
+                        console.log('next: ' + next)
+
+                        if(indexDot == 3 && next < count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 2})`).css("display", "none");
+                            $('.slick-dots li:nth-child(1)').css("display", "inline-block");
+                        }
+                        if(indexDot == 4 && next > count) {                        
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                            $('.slick-dots li:nth-child(1)').css("display", "none")
+                        } else if (indexDot == 4 && next < count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 2})`).css("display", "none");
+                            $('.slick-dots li:nth-child(2)').css("display", "inline-block");
+                    
+                        }
+                        if(indexDot == 5 && next > count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                            $('.slick-dots li:nth-child(2)').css("display", "none");
+                        } else if(indexDot == 5 && next < count){
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 2})`).css("display", "none");
+                            $('.slick-dots li:nth-child(3)').css("display", "inline-block");
+                        }
+                        if(indexDot == 6 && next > count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                            $('.slick-dots li:nth-child(3)').css("display", "none");
+                        } else if(indexDot == 6 && next < count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 2})`).css("display", "none");
+                            $('.slick-dots li:nth-child(4)').css("display", "inline-block");
+                        }
+                        if(indexDot == 7 && next > count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                            $('.slick-dots li:nth-child(4)').css("display", "none");
+                        } else if (indexDot == 7 && next < count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 2})`).css("display", "none");
+                            $('.slick-dots li:nth-child(5)').css("display", "inline-block");
+                        }
+                        if(indexDot == 8 && next > count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                            $('.slick-dots li:nth-child(5)').css("display", "none");
+                        } else if(indexDot == 8 && next < count) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 2})`).css("display", "none");
+                            $('.slick-dots li:nth-child(6)').css("display", "inline-block");
+                        }
+                        if(indexDot == 9) {
+                            $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
+                            $('.slick-dots li:nth-child(6)').css("display", "none");
+                        }
+                        count = next;
+                        console.log('count: ' + count)
                     }
-                    if(indexDot == 5) {
-                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
-                        $('.slick-dots li:nth-child(2)').css("display", "none");
-                    }
-                    if(indexDot == 6) {
-                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
-                        $('.slick-dots li:nth-child(3)').css("display", "none");
-                    }
-                    if(indexDot == 7) {
-                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
-                        $('.slick-dots li:nth-child(4)').css("display", "none");
-                    }
-                    if(indexDot == 8) {
-                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
-                        $('.slick-dots li:nth-child(5)').css("display", "none");
-                    }
-                    if(indexDot == 9) {
-                        $(`.slick-dots li:nth-child(${parseInt(indexDot) + 1})`).css("display", "inline-block");
-                        $('.slick-dots li:nth-child(6)').css("display", "none");
-                    }
+                    
                  })
             },
             appendDots: dots => (
